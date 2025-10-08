@@ -2,10 +2,9 @@ import DueBadge from "./DueBadge";
 
 export default function TaskItem({ task, onToggle, onDelete }) {
   return (
-    <li className={`task ${task.isDone ? "done" : ""}`}>
+    <li className="task" key={task.id}>
       <label className="taskMain">
-        <input
-          type="checkbox"
+        <input type="checkbox"
           checked={task.isDone}
           onChange={() => onToggle(task.id)}
         />
